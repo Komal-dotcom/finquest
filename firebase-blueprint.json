@@ -1,0 +1,53 @@
+{
+  "entities": {
+    "users": {
+      "title": "users",
+      "description": "User accounts and game state",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "password": { "type": "string" },
+        "xp": { "type": "number" },
+        "streak": { "type": "number" },
+        "levelTitle": { "type": "string" },
+        "city": { "type": "string" },
+        "monthlyIncome": { "type": "number" },
+        "completedLessons": { "type": "array", "items": { "type": "string" } },
+        "quizScores": { "type": "object" },
+        "completedChallenges": { "type": "array", "items": { "type": "string" } },
+        "avatar": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "lastActiveDate": { "type": "string" },
+        "goals": { "type": "object" }
+      },
+      "required": ["id", "name", "email", "xp"]
+    },
+    "lessons": {
+      "title": "lessons",
+      "description": "Financial academy lessons",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "xpReward": { "type": "number" }
+      },
+      "required": ["id", "title", "xpReward"]
+    },
+    "savingsTransactions": {
+      "title": "savingsTransactions",
+      "description": "User income and expense tracker records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "amount": { "type": "number" },
+        "type": { "type": "string" },
+        "date": { "type": "string" }
+      },
+      "required": ["id", "userId", "amount", "type"]
+    }
+  }
+}
